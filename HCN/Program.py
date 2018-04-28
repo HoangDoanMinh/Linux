@@ -1,3 +1,4 @@
+import os
 from HCN import HCNhat
 n = int(input("Nhap So Luong HCN ban muon : "))
 a = []
@@ -23,3 +24,10 @@ for item in a:
     if(iteam.getDT()>DT_MAX):
         print( "HCN lon nhat la :", iteam.getTen())
         break
+file = open("LuuHCN.txt", "w")
+for file1 in a:
+    file.write("-------------------------------------\n")
+    file.write(file1.ToString()+"\n")
+    file.write("Dien Tich " +str(file1.getDT())+"\n")
+    print("\n")
+    file.write("Chu Vi   " +str(file1.getCV())+"\n")
